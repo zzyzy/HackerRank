@@ -46,8 +46,8 @@ int main()
 		hour = (hour + 12) % 24; // Wrap around to 00 - 24
 		std::string hourStr = std::to_string(hour); // Convert to string
 
-		convertedTime[0] = hourStr[0];
-		convertedTime[1] = hour < 10 ? '0' : hourStr[1];
+		convertedTime[0] = hours < 10 ? '0' : hourStr[0];
+		convertedTime[1] = hour < 10 ? hourStr[0] : hourStr[1];
 		 
 		if (convertedTime[0] == '0' && convertedTime[1] == '0')
 		{
