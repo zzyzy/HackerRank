@@ -11,3 +11,6 @@ add_executable(PlusMinus Algorithms/Warmup/PlusMinus.cpp)
 add_executable(SimpleArraySum Algorithms/Warmup/SimpleArraySum.cpp)
 add_executable(Staircase Algorithms/Warmup/Staircase.cpp)
 add_executable(TimeConversion Algorithms/Warmup/TimeConversion.cpp)
+add_executable(CircularArrayRotation Algorithms/Warmup/CircularArrayRotation.cpp)
+
+add_executable(ArrayLeftRotation Algorithms/CTCI/ArrayLeftRotation.cpp)
