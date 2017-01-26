@@ -4,7 +4,10 @@
  * https://www.hackerrank.com/challenges/ctci-linked-list-cycle
  *
  * Written by Zhen Zhi Lee in C++11
- * Last modified 26/01/2017
+ * Last modified 27/01/2017
+ *
+ * Better solution:
+ * https://en.wikipedia.org/wiki/Cycle_detection#Tortoise_and_hare
  */
 
 #include <iostream>
