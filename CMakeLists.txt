@@ -15,3 +15,5 @@ add_executable(CircularArrayRotation Algorithms/Warmup/CircularArrayRotation.cpp
 
 add_executable(ArrayLeftRotation Algorithms/CTCI/ArrayLeftRotation.cpp)
 add_executable(MakingAnagrams Algorithms/CTCI/MakingAnagrams.cpp)
+add_executable(RansomNote Algorithms/CTCI/RansomNote.cpp)
+
