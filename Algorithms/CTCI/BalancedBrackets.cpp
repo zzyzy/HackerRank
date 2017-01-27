@@ -16,35 +16,21 @@ bool isBalanced(string expression) {
     stack<char> checker;
 
     for (auto c : expression) {
-        switch (c) {
-            case '{':
-            case '(':
-            case '[':
-                checker.push(c);
-                break;
-            case '}':
-                if (!checker.empty() && checker.top() == '{') {
-                    checker.pop();
-                } else {
-                    return false;
-                }
-                break;
-            case ')':
-                if (!checker.empty() && checker.top() == '(') {
-                    checker.pop();
-                } else {
-                    return false;
-                }
-                break;
-            case ']':
-                if (!checker.empty() && checker.top() == '[') {
-                    checker.pop();
-                } else {
-                    return false;
-                }
-                break;
-            default:
-                break;
+        if (c == '{' || c == '(' || c == '[') {
+            checker.push(c);
+            continue;
+        }
+
+        if (checker.empty()) return false;
+
+        auto bracket = checker.top();
+
+        if (bracket == '{' && c == '}' ||
+            bracket == '(' && c == ')' ||
+            bracket == '[' && c == ']') {
+            checker.pop();
+        } else {
+            return false;
         }
     }
 
