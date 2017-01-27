@@ -18,4 +18,4 @@ add_executable(MakingAnagrams Algorithms/CTCI/MakingAnagrams.cpp)
 add_executable(RansomNote Algorithms/CTCI/RansomNote.cpp)
 add_executable(DetectACycle Algorithms/CTCI/DetectACycle.cpp)
 add_executable(BalancedBrackets Algorithms/CTCI/BalancedBrackets.cpp)
-
+add_executable(ATaleOfTwoStacks Algorithms/CTCI/ATaleOfTwoStacks.cpp)
