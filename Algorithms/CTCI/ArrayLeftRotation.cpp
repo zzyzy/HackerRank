@@ -4,7 +4,7 @@
  * https://www.hackerrank.com/challenges/ctci-array-left-rotation
  *
  * Written by Zhen Zhi Lee in C++11
- * Last modified 25/07/2017
+ * Last modified 25/01/2017
  */
 
 #include <iostream>

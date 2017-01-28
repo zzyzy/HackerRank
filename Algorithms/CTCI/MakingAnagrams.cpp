@@ -4,7 +4,7 @@
  * https://www.hackerrank.com/challenges/ctci-making-anagrams
  *
  * Written by Zhen Zhi Lee in C++11
- * Last modified 26/07/2017
+ * Last modified 26/01/2017
  */
 
 #include <iostream>
