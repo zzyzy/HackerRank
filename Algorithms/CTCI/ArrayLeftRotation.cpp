@@ -1,3 +1,12 @@
+/*
+ * HackerRank CTCI Challenges
+ * Arrays: Left Rotation
+ * https://www.hackerrank.com/challenges/ctci-array-left-rotation
+ *
+ * Written by Zhen Zhi Lee in C++11
+ * Last modified 25/07/2017
+ */
+
 #include <iostream>
 #include <vector>
 

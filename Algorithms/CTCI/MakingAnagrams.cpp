@@ -1,3 +1,12 @@
+/*
+ * HackerRank CTCI Challenges
+ * Strings: Making Anagrams
+ * https://www.hackerrank.com/challenges/ctci-making-anagrams
+ *
+ * Written by Zhen Zhi Lee in C++11
+ * Last modified 26/07/2017
+ */
+
 #include <iostream>
 
 using namespace std;
