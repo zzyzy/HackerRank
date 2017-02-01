@@ -5,6 +5,9 @@
  *
  * Written by Zhen Zhi Lee in C++11
  * Last modified 01/02/2017
+ *
+ * Notes to self:
+ * - C++ static variables initializes once and only once
  */
 
 #include <iostream>
@@ -17,11 +20,9 @@ struct Node {
     Node *right = nullptr;
 };
 
-bool checkBST(Node *root) {
-    static Node *prev = nullptr;
-
+bool checkBSTHelper(Node *root, Node *&prev) {
     if (root) {
-        if (!checkBST(root->left))
+        if (!checkBSTHelper(root->left, prev))
             return false;
 
         if (prev && root->data <= prev->data)
@@ -29,10 +30,15 @@ bool checkBST(Node *root) {
 
         prev = root;
 
-        return checkBST(root->right);
+        return checkBSTHelper(root->right, prev);
     }
 
     return true;
+}
+
+bool checkBST(Node *root) {
+    Node *prev = nullptr;
+    return checkBSTHelper(root, prev);
 }
 
 Node *newNode(int value) {
