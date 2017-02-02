@@ -12,23 +12,19 @@
 
 #include <iostream>
 #include <queue>
+#include <iomanip>
 
 using namespace std;
 
-int main() {
-    int n;
-    cin >> n;
-
-    float median = 0.0f;
+vector<float> getRunningMedian(vector<int> arr) {
     priority_queue<int> left;
     priority_queue<int, vector<int>, greater<int>> right;
+    float m = 0.0f;
+    vector<float> medians;
 
-    for (auto i = 0; i < n; ++i) {
-        int num;
-        cin >> num;
-
+    for (auto num : arr) {
         if (left.size() > right.size()) {
-            if (num < median) {
+            if (num < m) {
                 right.push(left.top());
                 left.pop();
 
@@ -37,17 +33,17 @@ int main() {
                 right.push(num);
             }
 
-            median = (left.top() + right.top()) / 2.0f;
+            m = (left.top() + right.top()) / 2.0f;
         } else if (left.size() == right.size()) {
-            if (num < median) {
+            if (num < m) {
                 left.push(num);
-                median = left.top();
+                m = left.top();
             } else {
                 right.push(num);
-                median = right.top();
+                m = right.top();
             }
         } else if (left.size() < right.size()) {
-            if (num < median) {
+            if (num < m) {
                 left.push(num);
             } else {
                 left.push(right.top());
@@ -56,10 +52,31 @@ int main() {
                 right.push(num);
             }
 
-            median = (left.top() + right.top()) / 2.0f;
+            m = (left.top() + right.top()) / 2.0f;
         }
 
-        cout << median << endl;
+        medians.push_back(m);
+    }
+
+    return medians;
+}
+
+int main() {
+    size_t n;
+    cin >> n;
+
+    vector<int> arr(n);
+
+    for (auto i = 0; i < n; ++i) {
+        cin >> arr[i];
+    }
+
+    auto medians = getRunningMedian(arr);
+
+    cout << fixed << setprecision(1);
+
+    for (auto m : medians) {
+        cout << m << endl;
     }
 
     return 0;
