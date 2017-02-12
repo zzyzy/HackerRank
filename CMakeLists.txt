@@ -21,3 +21,7 @@ add_executable(BalancedBrackets Algorithms/CTCI/BalancedBrackets.cpp)
 add_executable(ATaleOfTwoStacks Algorithms/CTCI/ATaleOfTwoStacks.cpp)
 add_executable(IsThisABinarySearchTree Algorithms/CTCI/IsThisABinarySearchTree.cpp)
 add_executable(FindTheRunningMedian Algorithms/CTCI/FindTheRunningMedian.cpp)
+
+add_executable(MigratoryBirds RookieRank2/MigratoryBirds.cpp)
+add_executable(MinimumAbsoluteDifference RookieRank2/MinimumAbsoluteDifference.cpp)
+add_executable(HackerRankInAString RookieRank2/HackerRankInAString.cpp)
