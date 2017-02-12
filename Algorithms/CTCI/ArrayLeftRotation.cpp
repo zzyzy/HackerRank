@@ -5,6 +5,8 @@
  *
  * Written by Zhen Zhi Lee in C++11
  * Last modified 25/01/2017
+ *
+ * Alternative solution: use juggling algorithm
  */
 
 #include <iostream>
