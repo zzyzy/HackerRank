@@ -23,8 +23,9 @@ int main() {
 
         string pattern = "hackerrank";
         vector<size_t> positions(pattern.length());
-        size_t currentPos = 0;
+        size_t currentPos = 0; // Start index to search from
 
+        // First get the positions of all the characters in the string
         for (auto j = 0; j < pattern.length(); ++j) {
             positions[j] = s.find_first_of(pattern[j], currentPos);
             currentPos = positions[j] + 1 == s.length() ? s.length() - 1 : positions[j] + 1;

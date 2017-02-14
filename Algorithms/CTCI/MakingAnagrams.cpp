@@ -11,6 +11,9 @@
 
 using namespace std;
 
+// Compare a with b
+// Remove any character not found in a from b
+// Return sum of length of a and b
 int numberNeeded(string a, string b) {
     for (auto it = a.begin(); it != a.end();) {
         if (b.find_first_of(*it) != string::npos) {

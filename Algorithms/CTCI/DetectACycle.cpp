@@ -52,6 +52,9 @@ void clearList(Node *head) {
     }
 }
 
+// Better solution use tortoise and hare algorithm
+// Add visited node to hash table
+// If a node is already in the hash table, then there is a cycle
 bool hasCycle(Node *head) {
     if (!head) return false;
     unordered_set<Node *> references;

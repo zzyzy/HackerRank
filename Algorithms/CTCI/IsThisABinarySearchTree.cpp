@@ -20,14 +20,20 @@ struct Node {
     Node *right = nullptr;
 };
 
+// In Order Traversal
 bool checkBSTHelper(Node *root, Node *&prev) {
     if (root) {
+        // Fail first for left subtree
         if (!checkBSTHelper(root->left, prev))
             return false;
 
+        // If root value larger than prev value then the
+        // sequence is not sorted, meaning it is not a
+        // valid binary search tree
         if (prev && root->data <= prev->data)
             return false;
 
+        // Get reference to root for next iteration
         prev = root;
 
         return checkBSTHelper(root->right, prev);
@@ -36,6 +42,11 @@ bool checkBSTHelper(Node *root, Node *&prev) {
     return true;
 }
 
+// In Order Traversal binary search tree validation
+// Traverse the tree in the following sequence:
+// Left - Root - Right
+// Global reference to the previous node is needed
+// Hence the need for a helper function
 bool checkBST(Node *root) {
     Node *prev = nullptr;
     return checkBSTHelper(root, prev);
@@ -49,6 +60,9 @@ Node *newNode(int value) {
     return node;
 }
 
+// Construct a BST from an array
+// The middle value will be the root
+// And recursively do the same for the left and right subtree
 Node *arrayToBST(int arr[], int start, int end) {
     if (start > end)
         return nullptr;

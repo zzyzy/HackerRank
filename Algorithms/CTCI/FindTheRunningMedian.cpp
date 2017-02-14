@@ -16,6 +16,19 @@
 
 using namespace std;
 
+// Use two heap
+// Left heap is a max heap
+// Right heap is a min heap
+// Value less than effective median goes left, else go right
+// Both heaps can only differ by 1 element
+// Balance both heaps by:
+//  If left larger than right
+//    Move 1 element from left to right and push new value to left
+//  If right larger than left
+//    Move 1 element from right to left and push new value to right
+// Effective median:
+//  If both heaps same size, get average of both heap
+//  Else get the top of the larger sized heap
 vector<float> getRunningMedian(vector<int> arr) {
     priority_queue<int> left;
     priority_queue<int, vector<int>, greater<int>> right;

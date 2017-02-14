@@ -20,6 +20,9 @@ int main() {
 
     vector<int> a(n);
 
+    // Sort the list O(n log n)
+    // Then get the minimum adjacent (a[i + 1] - a[i]) difference O(n)
+    // Time complexity O(n log n + n)
     for (auto i = 0; i < n; i++) {
         cin >> a[i];
     }

@@ -11,7 +11,11 @@ int main()
     {
         for (auto u = 0; u < n; ++u)
         {
-            if (u < n - 1 - i)
+            // Left padding
+            // i = number of spaces
+            // Example: i == 2
+            // _ _ # (2 space left padding)
+            if (u < (n - 1) - i)
             {
                 cout << " ";
             } else
