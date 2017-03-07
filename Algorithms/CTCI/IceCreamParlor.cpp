@@ -27,7 +27,7 @@ struct IceCream {
 };
 
 int binarySearch(std::vector<IceCream> arr, int lo, int hi, int target) {
-    while (lo <= hi) {
+    while (lo <= hi) { // stop if hi < lo
         int mid = lo + (hi - lo) / 2; // (hi - lo) to prevent overflow
         // http://www.geeksforgeeks.org/problem-binary-search-implementations/
 
@@ -43,11 +43,11 @@ int binarySearch(std::vector<IceCream> arr, int lo, int hi, int target) {
     return -1;
 }
 
+std::ifstream infile("IceCreamParlor.txt");
+std::istream &input = infile.is_open() ? infile : std::cin;
+
 int main() {
-    std::ifstream infile;
-    infile.open("IceCreamParlor.txt");
     if (!infile.is_open()) std::cerr << "Input file not found" << std::endl;
-    std::istream &input = infile.is_open() ? infile : std::cin;
 
     int t{}; // number of trips
 
@@ -76,7 +76,7 @@ int main() {
 
         int targetCost{}, a{}, b{};
 
-        for (auto j = 0; j < n; ++j) {
+        for (auto j = 0; j < n - 1; ++j) {
             a = c[j].index;
             targetCost = m - c[j].cost;
 
