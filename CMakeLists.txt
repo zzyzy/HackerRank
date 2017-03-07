@@ -24,6 +24,8 @@ add_executable(FindTheRunningMedian Algorithms/CTCI/FindTheRunningMedian.cpp)
 add_executable(BubbleSort Algorithms/CTCI/BubbleSort.cpp)
 add_executable(Comparator Algorithms/CTCI/Comparator.cpp)
 add_executable(IceCreamParlor Algorithms/CTCI/IceCreamParlor.cpp)
+add_executable(TimeComplexityPrimality Algorithms/CTCI/TimeComplexityPrimality.cpp)
+add_executable(RecursionFibonacciNumbers.cpp Algorithms/CTCI/RecursionFibonacciNumbers.cpp)
 
 add_executable(MigratoryBirds RookieRank2/MigratoryBirds.cpp)
 add_executable(MinimumAbsoluteDifference RookieRank2/MinimumAbsoluteDifference.cpp)
